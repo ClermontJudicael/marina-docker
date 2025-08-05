@@ -1,0 +1,15 @@
+databases:
+  - name: marina-db  # Optionnel si vous n'avez pas besoin de DB
+    plan: free
+
+services:
+  - type: web
+    name: marina-api
+    runtime: docker
+    plan: free
+    dockerfilePath: Dockerfile
+    env: docker
+    port: 8080
+    envVars:
+      - key: PORT
+        value: 8080
